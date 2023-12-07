@@ -14,44 +14,45 @@
   </head>
   <body>
     <div class="container">
-      <form class="row g-10">
-        <div class="col-auto">
-          <label for="inputCity" class="visually-hidden">Enter a city</label>
+      <header>
+        <form id="search-form">
           <input
-            type="text"
-            class="form-control"
-            id="inputCity"
+            type="search"
             placeholder="Enter a city"
-            autocomplete="off"
-            autofocus="on"
+            required
+            class="search-input"
+            id="input-city"
           />
+          <input type="submit" value="Search" class="search-button" />
+        </form>
+      </header>
+      <main>
+        <div class="weather-forecast">
+          <div>
+            <h1 class="main-city" id="main-city">Lagos, Nigeria</h1>
+            <p class="current-details">
+              <span id="current-date"></span>, Sunny
+              <br />
+              Humidity: <strong>77%</strong>, Wind: <strong>12km/h</strong>
+            </p>
+          </div>
+          <div class="current-temperature">
+            <span class="current-temp-icon">☀️</span
+            ><span class="current-temp-value" id="current-temp">30</span
+            ><span class="current-temp-unit">°C</span>
+          </div>
         </div>
-        <div class="col-auto">
-          <button type="button" value="Search" class="btn btn-danger">
-            Search
-          </button>
-        </div>
-      </form>
-      <div class="weather-forecast">
-        <div>
-          <h1 class="main-city" id="main-city" Lagos, Nigeria></h1>
-          <p class="details">
-            <span id="current-date"></span>, Sunny <br />
-            Humidity: <strong>77%</strong>, Wind: <strong>12km/h</strong>
-          </p>
-        </div>
-        <div class="temperature">
-          <span class="temp-icon">☀️</span>
-          <span class="temp-value" id="temp-value">33℃</span>
-        </div>
-        <footer>
-          <p>
-            <a href="https://github.com/BiBiE303" target="_blank">Bisola</a> and
-            is hosted <a href="">on GitHub</a> and
-            <a href="">hosted on Netlify</a>
-          </p>
-        </footer>
-      </div>
+      </main>
+      <footer>
+        <p>
+          This project was coded by
+          <a href="https://github.com/BiBiE303" target="_blank">Bisola</a> and
+          is
+          <a href="https://github.com/BiBiE303/weatherForecastApp">on GitHub</a>
+          and
+          <a href="">hosted on Netlify</a>
+        </p>
+      </footer>
     </div>
   </body>
   <script src="index.js"></script>
