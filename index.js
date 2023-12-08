@@ -5,12 +5,15 @@ function displayTemp(response) {
   let humidityELement = document.querySelector("#humidity");
   let descriptionElement = document.querySelector("#description");
   let windElement = document.querySelector("#wind");
+  let iconElement = document.querySelector("#icon");
 
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = temperature;
   humidityELement.innerHTML = `${response.data.temperature.humidity}%`;
   descriptionElement.innerHTML = response.data.condition.description;
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
+  getForecast(response.data.city);
 }
 
 function search(event) {
