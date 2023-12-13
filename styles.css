@@ -72,6 +72,13 @@ footer {
   font-size: 40px;
   margin-right: 10px;
 }
+.forecast {
+  margin-top: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
 .current-temp-value {
   font-size: 80px;
   font-weight: bold;
@@ -81,4 +88,15 @@ footer {
   font-size: 20px;
   position: relative;
   top: -38px;
+}
+.forecast-date {
+  font-size: 20px;
+  color: orangered;
+  opacity: 0.6;
+}
+.forecast-temperatures {
+  font-size: 16px;
+}
+.forecast-temperature-min {
+  opacity: 0.6;
 }
